@@ -21,7 +21,11 @@ struct ContentView: View {
             .resizable()
             .frame(width: 40, height: 40)
             .foregroundColor(.yellow)
-            .animation(.default)
+            .animation(
+            Animation
+                .easeInOut(duration: 1)
+                .repeatForever(autoreverses: true)
+            )
             .offset(x: xOffset, y: 0)
         // 3. Trigger the animation on a tap
             .onTapGesture {
